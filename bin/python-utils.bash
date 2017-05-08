@@ -9,12 +9,6 @@ _check_version(){
     fi
 }
 
-python-default() {
-    _check_version $1
-    echo "Make '$1' Python's version as default."
-    pyenv global $1 && pyenv shell $1
-}
-
 python-remove() {
     [ -z "$1" ] && echo "Please set a version to be deleted. " && exit -
     echo "Remove '$1' version of Python from pyenv."

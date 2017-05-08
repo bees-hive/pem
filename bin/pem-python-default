@@ -1,0 +1,8 @@
+#!/usr/bin/env bash -e
+[ "$PEM_DEBUG" = "yes" ] && set -x
+
+pem-default() {
+    pem_check_version "$1"
+    echo "Make '$1' Python's version as default."
+    pyenv global "$1" && pyenv shell "$1"
+}
