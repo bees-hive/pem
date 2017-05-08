@@ -14,10 +14,19 @@ usage() {
     echo "  folder-clean        Clean up Python's environment for current folder."
 }
 
-main() {
+commands() {
+    echo "python-install"
+    echo "python-default"
+    echo "python-remove"
+    echo "folder-env"
+    echo "folder-state"
+    echo "folder-clean"
+}
 
+main() {
     local CMD="$1"; shift
     [ -z "$CMD" ] && usage && exit 1
+    [ "$CMD" = "commands" ] && commands && exit 0
     [ ! -e "$PEM_DIR/pem-$CMD" ] && usage && exit 2
     echo "$PEM_DIR/pem-common"
     . "$PEM_DIR/pem-common"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-_python_advanced() {
+_pem() {
     local cur prev opts
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
@@ -17,7 +17,7 @@ _python_advanced() {
         *) ;; 
     esac
     
-    opts=($(py commands))
+    opts=($(pem commands))
     COMPREPLY=( $(compgen -W "${opts[*]}" -- ${cur}) )
 }
-complete -F _python_advanced py
+complete -F _pem pem
