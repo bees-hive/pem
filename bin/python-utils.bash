@@ -9,16 +9,6 @@ _check_version(){
     fi
 }
 
-python-install() {
-    _check_version $1
-    echo "Install '$1' version of Python and make it as default Python's version." 
-    pyenv install $1 && \
-    pyenv global $1 && \
-    pip install --upgrade pip && \
-    pip install virtualenv
-    pyenv rehash
-}
-
 python-default() {
     _check_version $1
     echo "Make '$1' Python's version as default."

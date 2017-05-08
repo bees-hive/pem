@@ -1,0 +1,9 @@
+#!/usr/bin/env bash -e
+[ "$PEM_DEBUG" = "yes" ] && set -x
+
+pem_check_version(){
+    if [ -z "$1" ]; then
+        echo "Please specify Python's version (like 2.7.11)."
+        exit -2
+    fi
+}

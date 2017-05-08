@@ -1,5 +1,4 @@
 #!/usr/bin/env bash -e
-
 [ "$PEM_DEBUG" = "yes" ] && set -x
 
 PEM_DIR=$(dirname "$0")
@@ -20,7 +19,10 @@ main() {
     local CMD="$1"; shift
     [ -z "$CMD" ] && usage && exit 1
     [ ! -e "$PEM_DIR/pem-$CMD" ] && usage && exit 2
-    exec "$PEM_DIR/pem-$CMD" "$@"
+    echo "$PEM_DIR/pem-common"
+    . "$PEM_DIR/pem-common"
+    . "$PEM_DIR/pem-$CMD"
+    pem-default "$@"
 }
 
 main "$@"
