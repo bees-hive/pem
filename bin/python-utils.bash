@@ -9,12 +9,6 @@ _check_version(){
     fi
 }
 
-python-remove() {
-    [ -z "$1" ] && echo "Please set a version to be deleted. " && exit -
-    echo "Remove '$1' version of Python from pyenv."
-    pyenv uninstall -f $1
-}
-
 folder-env() {
     local FOLDER=${PWD##*/}
     read -p "Please enter a name of virtual env (hit Enter for default: '$FOLDER'): " NAME
