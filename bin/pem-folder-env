@@ -1,0 +1,25 @@
+#!/usr/bin/env bash -e
+[ "$PEM_DEBUG" = "yes" ] && set -x
+
+pem-default() {
+    local FOLDER=${PWD##*/}
+    read -p "Please enter a name of virtual env (hit Enter for default: '$FOLDER'): " NAME
+    NAME=${NAME:-${FOLDER}}
+    if [ -z "$NAME" ]; then
+        echo "Virtual env name is not set"
+        exit 1
+    fi
+
+    VERSION=$(pyenv global)
+    read -p "Do you want to use '$VERSION' version of Python? [y/n] " DEFAULT
+    case $DEFAULT in
+            [Yy]* ) echo "'$VERSION' version will be used." ;;
+            [Nn]* ) echo -e "Available: \n"; pyenv versions --bare --skip-aliases; read -p "Please set a version: " VERSION;;
+            * ) echo "Version is not set! "; exit -1 ;;
+    esac
+
+    pyenv virtualenv $VERSION $NAME
+    pyenv local $NAME
+    ln -s `pyenv which python | sed -e 's/\/bin\/python//g'` ${PEM_VENV_LINK} && \
+    echo "'$PWD/${PEM_VENV_LINK}' link is created to local Python folder."
+}

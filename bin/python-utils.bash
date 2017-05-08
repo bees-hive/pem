@@ -9,29 +9,6 @@ _check_version(){
     fi
 }
 
-folder-env() {
-    local FOLDER=${PWD##*/}
-    read -p "Please enter a name of virtual env (hit Enter for default: '$FOLDER'): " NAME
-    NAME=${NAME:-${FOLDER}}
-    if [ -z "$NAME" ]; then
-        echo "Virtual env name is not set"
-        exit 1
-    fi
-
-    VERSION=$(pyenv global)
-    read -p "Do you want to use '$VERSION' version of Python? [y/n] " DEFAULT
-    case $DEFAULT in 
-            [Yy]* ) echo "'$VERSION' version will be used." ;;
-            [Nn]* ) echo -e "Avaliable: \n"; pyenv versions --bare --skip-aliases; read -p "Please set a version: " VERSION;;
-            * ) echo "Version is not set! "; exit -1 ;;
-    esac
-    
-    pyenv virtualenv $VERSION $NAME
-    pyenv local $NAME
-    ln -s `pyenv which python | sed -e 's/\/bin\/python//g'` ${SYM_LINK} && \
-    echo "'$PWD/${SYM_LINK}' link is created to local Python folder."
-}
-
 folder-state() {
     echo "Global Python:" `pyenv global`
     echo "Local Python: `pyenv local 2>&1` (python is `pyenv which python 2>&1`)"
