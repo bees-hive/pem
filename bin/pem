@@ -1,0 +1,26 @@
+#!/usr/bin/env bash -e
+
+[ "$PEM_DEBUG" = "yes" ] && set -x
+
+PEM_DIR=$(dirname "$0")
+
+usage() {
+    echo "Usage: pem <command>"
+    echo "Available commands are:"
+    echo "  python-install      Install a version of Python."
+    echo "  python-default      Configure default Python's env."
+    echo "  python-remove       Remove a Python's version."
+    echo "  folder-env          Configure local Python's environment for current folder."
+    echo "  folder-state        Show Python's environment for current folder."
+    echo "  folder-clean        Clean up Python's environment for current folder."
+}
+
+main() {
+
+    local CMD="$1"; shift
+    [ -z "$CMD" ] && usage && exit 1
+    [ ! -e "$PEM_DIR/pem-$CMD" ] && usage && exit 2
+    exec "$PEM_DIR/pem-$CMD" "$@"
+}
+
+main "$@"
