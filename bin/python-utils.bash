@@ -9,11 +9,6 @@ _check_version(){
     fi
 }
 
-folder-state() {
-    echo "Global Python:" `pyenv global`
-    echo "Local Python: `pyenv local 2>&1` (python is `pyenv which python 2>&1`)"
-}
-
 folder-clean() {
     ls ${SYM_LINK} 1>/dev/null || exit -5
     rm -rf ${SYM_LINK} && echo "'${SYM_LINK}' link is removed."
