@@ -2,6 +2,8 @@
 =================================
 `pem` tool allows easy manage different Python's versions and dependencies.
 
+[![Rultor.com](http://www.rultor.com/b/extsoft/pem)](http://www.rultor.com/p/extsoft/pem)
+
 Installation
 ============
 First of all, you have to install dependencies:
