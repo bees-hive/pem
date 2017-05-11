@@ -1,0 +1,11 @@
+architect: extsoft
+merge:
+    fast-forward: only
+    rebase: true
+    script: echo "Try to merge..."
+    commanders:
+    - extsoft
+release:
+    pre: false
+    script: echo "Release ${tag}"
+    commanders: extsoft
