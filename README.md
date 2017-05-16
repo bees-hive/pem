@@ -7,6 +7,9 @@
 
 Installation
 ============
+
+Manual
+------
 First of all, you have to install dependencies:
 - [pyenv](https://github.com/pyenv/pyenv) 
 - [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv)
@@ -15,7 +18,11 @@ Then, install `pem`:
 
 `curl https://raw.githubusercontent.com/extsoft/pem/master/install.bash | $(which bash)`
 
-@todo #11:2h Add brew installation here too.
+Homebrew
+--------
+`brew install extsoft/insight/pem`
+
+To find out more [click here](https://github.com/extsoft/homebrew-insight).
 
 Usage
 =====
