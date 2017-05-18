@@ -1,7 +1,6 @@
 #!/usr/bin/env bash -e
 [ "$PEM_DEBUG" = "yes" ] && set -x
 
-pem-default() {
-    echo "Global Python:" `pyenv global`
+pem-default() {    
     echo "Local Python: `pyenv local 2>&1` (python is `pyenv which python 2>&1`)"
 }
