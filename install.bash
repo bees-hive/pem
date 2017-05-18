@@ -30,7 +30,7 @@ install() {
     fi
 
     echo "# allow pem command" >> ~/.bash_profile
-    echo "alias pem='$PEM_INSTALL_PATH/bin/pem'" >> ~/.bash_profile
+    echo "export PATH=$PEM_INSTALL_PATH/bin"':$PATH' >> ~/.bash_profile
     echo "# allow pem completion" >> ~/.bash_profile
     echo "[ -f $PEM_INSTALL_PATH/bin/pem-completion ] && . $PEM_INSTALL_PATH/bin/pem-completion" >> ~/.bash_profile
     echo ============== ~/.bash_profile ================
