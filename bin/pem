@@ -28,7 +28,6 @@ main() {
     [ -z "$CMD" ] && usage && exit 1
     [ "$CMD" = "commands" ] && commands && exit 0
     [ ! -e "$PEM_DIR/pem-$CMD" ] && usage && exit 2
-    echo "$PEM_DIR/pem-common"
     . "$PEM_DIR/pem-common"
     . "$PEM_DIR/pem-$CMD"
     pem-default "$@"
