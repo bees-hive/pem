@@ -5,7 +5,10 @@ PEM_DIR=$(dirname "$0")
 
 usage() {
     echo "Usage: pem <command>"
+    echo "Usage: pem <command> help"
+    echo ""
     echo "Available commands are:"
+    echo "  help                Display current message."
     echo "  python-install      Install a version of Python."
     echo "  python-default      Configure default Python's env."
     echo "  python-remove       Remove a Python's version."
@@ -15,6 +18,7 @@ usage() {
 }
 
 commands() {
+    echo "help"
     echo "python-install"
     echo "python-default"
     echo "python-remove"
@@ -24,13 +28,24 @@ commands() {
 }
 
 main() {
-    local CMD="$1"; shift
-    [ -z "$CMD" ] && usage && exit 1
-    [ "$CMD" = "commands" ] && commands && exit 0
-    [ ! -e "$PEM_DIR/pem-$CMD" ] && usage && exit 2
+    local COMMAND="$1"; shift
+    [ -z "$COMMAND" ] && usage && exit 1
+    [ "$COMMAND" = "commands" ] && commands && exit 0
+    [ ! -e "$PEM_DIR/pem-$COMMAND" ] && echo "Unknown command: pem $COMMAND" && usage && exit 2
     . "$PEM_DIR/pem-common"
-    . "$PEM_DIR/pem-$CMD"
-    pem-default "$@"
+    . "$PEM_DIR/pem-$COMMAND"
+
+    local ACTION="default"
+    if [ "$1" != "" ]; then
+        ACTION="$1"; shift
+    fi
+    [ "$ACTION" = "help" ] && usage && exit 0
+    if ! type "pem-$ACTION" >/dev/null 2>&1; then
+        echo "'$COMMAND': unknown action: '$ACTION'"
+        usage       # overloaded usage
+        exit 3
+    fi
+    pem-$ACTION "$@"
 }
 
 main "$@"
