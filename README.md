@@ -26,4 +26,18 @@ To find out more [click here](https://github.com/extsoft/homebrew-insight).
 
 Usage
 =====
-@todo #11:30m Add basic usage samples. Maybe in form of command and its output.
+Run `pem help` to find out documentation. Example output: 
+```
+Usage: pem <command>
+Usage: pem <command> help
+
+Available commands are:
+  help                Display current message.
+  python-install      Install a version of Python.
+  python-default      Configure default Python's env.
+  python-remove       Remove a Python's version.
+  folder-env          Configure local Python's environment for current folder.
+  folder-state        Show Python's environment for current folder.
+  folder-clean        Clean up Python's environment for current folder.
+
+```
