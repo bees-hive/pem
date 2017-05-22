@@ -29,22 +29,18 @@ install() {
         echo "Unexpected mode: $1"
     fi
 
-    echo "# allow pem command" >> ~/.bash_profile
-    echo "export PATH=$PEM_INSTALL_PATH/bin"':$PATH' >> ~/.bash_profile
-    echo "# allow pem completion" >> ~/.bash_profile
-    echo "[ -f $PEM_INSTALL_PATH/bin/pem-completion ] && . $PEM_INSTALL_PATH/bin/pem-completion" >> ~/.bash_profile
-    echo ============== ~/.bash_profile ================
-    grep pem ~/.bash_profile
-    echo ===============================================
+    echo "Add the following to your .bash_profile to allow:"
+    echo "#pem command"
+    echo "export PATH=$PEM_INSTALL_PATH/bin:\$PATH"
+    echo "#pem completion"
+    echo "[ -f $PEM_INSTALL_PATH/bin/pem-completion ] && . $PEM_INSTALL_PATH/bin/pem-completion"
     echo ""
-    echo "Please restart the terminal and enjoy the 'pem'!"
+    echo "Then please restart the terminal and enjoy the 'pem'!"
 }
 
 uninstall() {
     echo "Uninstalling pem from $PEM_INSTALL_PATH"
     run "rm -rfv $PEM_INSTALL_PATH"
-    echo "Remove 'pem' settings from ~/.bash_profile"
-    run "sed -i.uninstall-pem '/pem/d' ~/.bash_profile"
 }
 
 case "$1" in
