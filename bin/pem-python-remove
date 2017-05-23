@@ -2,7 +2,14 @@
 [ "$PEM_DEBUG" = "yes" ] && set -x
 
 pem-default() {
+    [ "$1" = "-h" ] && usage && exit 0
     [ -z "$1" ] && echo "Please set a version to be deleted. " && exit -3
     echo "Remove '$1' version of Python from pyenv."
     pyenv uninstall -f "$1"
+}
+
+usage(){
+    echo "Function removes Python's version."
+    echo "Usage: pem python-remove <version>"
+    echo "See \`pyenv versions\` for a complete list of installed versions."
 }
