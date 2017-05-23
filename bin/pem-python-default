@@ -6,3 +6,9 @@ pem-default() {
     echo "Make '$1' Python's version as default."
     pyenv global "$1" && pyenv shell "$1"
 }
+
+usage() {
+    echo "Usage: pem python-default <version>"
+    echo ""
+    echo "See \`pyenv versions\` for a complete list of installed versions."
+}
