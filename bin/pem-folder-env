@@ -23,3 +23,7 @@ pem-default() {
     ln -s `pyenv which python | sed -e 's/\/bin\/python//g'` ${PEM_VENV_LINK} && \
     echo "'$PWD/${PEM_VENV_LINK}' link is created to local Python folder."
 }
+
+usage() {
+    echo "Usage: pem folder-env"
+}
