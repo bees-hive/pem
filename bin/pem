@@ -28,8 +28,11 @@ commands() {
 }
 
 main() {
-    local COMMAND="$1"; shift
-    [ -z "$COMMAND" ] && usage && exit 1
+    local COMMAND="default"
+    if [ "$1" != "" ]; then
+        COMMAND="$1"; shift
+    fi
+    [ "$COMMAND" = "default" ] && usage && exit 1
     [ "$COMMAND" = "commands" ] && commands && exit 0
     [ ! -e "$PEM_DIR/pem-$COMMAND" ] && echo "Unknown command: pem $COMMAND" && usage && exit 2
     . "$PEM_DIR/pem-common"
