@@ -5,3 +5,7 @@ pem-default() {
     echo "Global Python:" `pyenv global`
     echo "Local Python: `pyenv local 2>&1` (python is `pyenv which python 2>&1`)"
 }
+
+usage(){
+    echo "Usage: pem folder-state"
+}
