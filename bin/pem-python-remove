@@ -6,10 +6,3 @@ pem-default() {
     echo "Remove '$1' version of Python from pyenv."
     pyenv uninstall -f "$1"
 }
-
-usage(){
-    echo "Usage: pem python-remove <version>"
-    echo ""
-    echo "See \`pyenv versions\` for a complete list of installed versions."
-}
-
