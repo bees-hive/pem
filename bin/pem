@@ -39,7 +39,7 @@ main() {
     . "$PEM_DIR/pem-$COMMAND"
 
     local ACTION="default"
-    if [ "$1" != "" ]; then
+    if [ "$1" = "help" ]; then
         ACTION="$1"; shift
     fi
     [ "$ACTION" = "help" ] && usage && exit 0
