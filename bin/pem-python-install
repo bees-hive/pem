@@ -11,7 +11,7 @@ pem-default() {
     pyenv rehash
 }
 
-+usage(){
+usage(){
     echo "Usage: pem python-install <version>"
     echo ""
     echo "See \`pyenv install -l|--list\` for a complete list of available versions."
