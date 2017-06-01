@@ -4,6 +4,7 @@
 
 [![Rultor.com](http://www.rultor.com/b/extsoft/pem)](http://www.rultor.com/p/extsoft/pem)
 [![PDD status](http://www.0pdd.com/svg?name=extsoft/pem)](http://www.0pdd.com/p?name=extsoft/pem)
+[![Build Status](https://travis-ci.org/extsoft/pem.svg?branch=master)](https://travis-ci.org/extsoft/pem)
 
 Installation
 ============

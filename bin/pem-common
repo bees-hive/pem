@@ -1,4 +1,5 @@
-#!/usr/bin/env bash -e
+#!/usr/bin/env bash
+set -e
 [ "$PEM_DEBUG" = "yes" ] && set -x
 
 export PEM_VENV_LINK='venv'
