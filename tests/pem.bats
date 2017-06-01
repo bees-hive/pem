@@ -13,3 +13,9 @@ load commons
   run pem
   [ "$status" -eq 0 ]
 }
+
+
+@test "exit code is 0 when run 'pem help'" {
+  run pem help
+  [ "$status" -eq 0 ]
+}
