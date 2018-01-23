@@ -13,7 +13,10 @@ _pem() {
         python-install)
             local data=$(pyenv install --list | sed '/Available versions:/d')
             COMPREPLY=( $(compgen -W "${data}" ${cur}) )
-            return 0 ;; 
+            return 0 ;;
+        folder-env)
+            COMPREPLY=( $(compgen -W "--with-vevn-link" ${cur}) )
+            return 0 ;;
         *) ;; 
     esac
     
