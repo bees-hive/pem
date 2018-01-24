@@ -4,11 +4,16 @@ set -e
 
 pem-default() {
     pem_check_version "$1"
-    echo "Install '$1' version of Python and make it as default Python's version."
-    pyenv install $1 && \
-    pyenv global $1 && \
-    pip install --upgrade pip && \
-    pip install virtualenv
+    echo "Install Python '$1'..."
+    local CURRENT=`pyenv global`
+    pyenv install "$1"
+    (
+        pyenv global "$1"
+        echo "Install additional packages"
+        pip install --upgrade pip
+        pip install virtualenv
+        pyenv global ${CURRENT}
+    ) || pyenv global ${CURRENT}
     pyenv rehash
 }
 
