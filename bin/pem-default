@@ -9,7 +9,5 @@ pem-default() {
 }
 
 usage() {
-    echo "Usage: pem python-default <version>"
-    echo ""
-    echo "See \`pyenv versions\` for a complete list of installed versions."
+    echo "Usage: pem default <version>"
 }
