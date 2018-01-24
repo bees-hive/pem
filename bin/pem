@@ -3,6 +3,7 @@ set -e
 [  "$PEM_DEBUG" = "yes" ] && set -x
 
 PEM_DIR=$(dirname "$0")
+PEM_EMPTY="pem-empty"
 
 usage() {
     echo "Usage: pem <command>"
@@ -11,7 +12,7 @@ usage() {
     echo "Available commands are:"
     echo "  help                Display current message."
     echo "  install             Install a version of Python."
-    echo "  python-default      Configure default Python's env."
+    echo "  default             Configure default Python's version."
     echo "  python-remove       Remove a Python's version."
     echo "  folder-env          Configure local Python's environment for current folder."
     echo "  folder-state        Show Python's environment for current folder."
@@ -21,7 +22,7 @@ usage() {
 commands() {
     echo "help"
     echo "install"
-    echo "python-default"
+    echo "default"
     echo "python-remove"
     echo "folder-env"
     echo "folder-state"
@@ -29,11 +30,11 @@ commands() {
 }
 
 main() {
-    local COMMAND="default"
+    local COMMAND=${PEM_EMPTY}
     if [ "$1" != "" ]; then
         COMMAND="$1"; shift
     fi
-    [ "$COMMAND" = "default" ] || [ "$COMMAND" = "help" ] && usage && exit 0
+    [ "$COMMAND" = "${PEM_EMPTY}" ] || [ "$COMMAND" = "help" ] && usage && exit 0
     [ "$COMMAND" = "commands" ] && commands && exit 0
     [ ! -e "$PEM_DIR/pem-$COMMAND" ] && echo "Unknown command: pem $COMMAND" && usage && exit 2
     . "$PEM_DIR/pem-common"

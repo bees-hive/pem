@@ -8,11 +8,9 @@ install
 -------
 Installs desired version of Python. In addition, the command updates `pip` to the latest version and installs `virtualenv` package. It's possible to pass several versions instead of one. 
 
-python-default
---------------
+default
+-------
 Configures provided Python's environment as default for the system.
-
-@todo #58 Rename `python-default` to `default`.
 
 python-remove
 -------------
