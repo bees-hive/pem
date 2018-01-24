@@ -29,3 +29,5 @@ To find out more [click here](https://github.com/extsoft/homebrew-insight).
 Contribution
 ============
 If you have any questions/suggestions, please open a new issue.
+
+Before send a pull request, make sure the tests are passed. Please use docker command from [.travis.yml](.travis.yml) to run the tests.

@@ -1,10 +1,6 @@
 sudo: required
 language: bash
-before_install:
-  - sudo add-apt-repository ppa:duggan/bats --yes
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq bats
-script:
-  - bats --tap tests
+services: docker
+script: docker run -it -v "$(pwd):/code" extsoft/bats:2017-10-13 /code/tests
 notifications:
   email: false
