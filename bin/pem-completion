@@ -10,7 +10,7 @@ _pem() {
         python-remove | python-default) 
             COMPREPLY=( $(compgen -W "$(pyenv versions --bare --skip-aliases)" ${cur}) )
             return 0 ;; 
-        python-install)
+        install)
             local data=$(pyenv install --list | sed '/Available versions:/d')
             COMPREPLY=( $(compgen -W "${data}" ${cur}) )
             return 0 ;;

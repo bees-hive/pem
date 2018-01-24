@@ -18,7 +18,7 @@ pem-default() {
 }
 
 usage(){
-    echo "Usage: pem python-install <version>"
+    echo "Usage: pem install <version>"
     echo ""
     echo "See \`pyenv install -l|--list\` for a complete list of available versions."
 }

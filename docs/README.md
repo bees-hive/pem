@@ -4,11 +4,9 @@ help
 ----
 Displays a help message.
 
-python-install
---------------
+install
+-------
 Installs desired version of Python. In addition, the command updates `pip` to the latest version and installs `virtualenv` package.
-
-@todo #58 Rename `python-install` to `install` as we can install only Python.
 
 @todo #58 Add ability to install several versions at the same time.
 
