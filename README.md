@@ -1,6 +1,7 @@
 **Python environment management**
 =================================
-`pem` tool allows easy manage different Python's versions and dependencies.
+`pem` tool allows easy manage different Python's versions and dependencies. To find out more, please visit [http://pem.extsoft.pro
+](http://pem.extsoft.pro).
 
 [![Rultor.com](http://www.rultor.com/b/extsoft/pem)](http://www.rultor.com/p/extsoft/pem)
 [![PDD status](http://www.0pdd.com/svg?name=extsoft/pem)](http://www.0pdd.com/p?name=extsoft/pem)
@@ -25,20 +26,6 @@ Homebrew
 
 To find out more [click here](https://github.com/extsoft/homebrew-insight).
 
-Usage
-=====
-Run `pem help` to find out documentation. Example output: 
-```
-Usage: pem <command>
-Usage: pem <command> help
-
-Available commands are:
-  help                Display current message.
-  python-install      Install a version of Python.
-  python-default      Configure default Python's env.
-  python-remove       Remove a Python's version.
-  folder-env          Configure local Python's environment for current folder.
-  folder-state        Show Python's environment for current folder.
-  folder-clean        Clean up Python's environment for current folder.
-
-```
+Contribution
+============
+If you have any questions/suggestions, please open a new issue.
