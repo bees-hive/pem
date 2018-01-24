@@ -10,3 +10,9 @@ pem_check_version(){
         exit -2
     fi
 }
+
+message-in-box(){
+    t="$@xxxx"
+    c=${replace:--}
+    echo -e "${t//?/$c}\n$c $@ $c\n${t//?/$c}"
+}

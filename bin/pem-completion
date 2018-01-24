@@ -17,7 +17,14 @@ _pem() {
         folder-env)
             COMPREPLY=( $(compgen -W "--with-vevn-link" ${cur}) )
             return 0 ;;
-        *) ;; 
+        *)
+            if [ "${prev}" != "install" ]; then
+                if [[ "${COMP_WORDS[@]}" =~ "install" ]]; then
+                    COMPREPLY=( $(compgen -W "$(pyenv install --list | sed '/Available versions:/d')" ${cur}) )
+                    return 0
+                fi
+            fi
+        ;;
     esac
     
     opts=($(pem commands))
