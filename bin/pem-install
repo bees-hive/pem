@@ -4,21 +4,22 @@ set -e
 
 pem-default() {
     pem_check_version "$1"
-    echo "Install Python '$1'..."
+    echo "Versions to install: $@"
     local CURRENT=`pyenv global`
-    pyenv install "$1"
-    (
-        pyenv global "$1"
-        echo "Install additional packages"
-        pip install --upgrade pip
-        pip install virtualenv
-        pyenv global ${CURRENT}
-    ) || pyenv global ${CURRENT}
+    for VERSION in "$@"; do
+        (
+            pyenv install "${VERSION}"
+            pyenv global "${VERSION}"
+            echo "Install additional packages"
+            pip install --upgrade pip
+            pip install virtualenv
+
+        ) || message-in-box "Unable to install ${VERSION}"
+    done
+    pyenv global ${CURRENT}
     pyenv rehash
 }
 
 usage(){
-    echo "Usage: pem install <version>"
-    echo ""
-    echo "See \`pyenv install -l|--list\` for a complete list of available versions."
+    echo "Usage: pem install <version> [version...]"
 }
