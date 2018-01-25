@@ -32,6 +32,6 @@ use-float-venv
 --------------
 Configures provided virtual environment as default for the system.
 
-display-venv
-------------
+display-float-venv
+------------------
 Displays system's virtual environment.
