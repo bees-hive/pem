@@ -24,11 +24,9 @@ create-dir-env
 --------------
 Creates an environment based on given version and configures it as the local one for a current directory.
 
-folder-state
--------------
+display-dir-env
+---------------
 Displays Python's path which was configured for the directory. If the environment is absent, a default Python's path will be displayed.
-
-@todo #58 Rename `folder-state` to `current-env`. Make sure the current implementation matches with this documentation.
 
 create-float-env
 ----------------
