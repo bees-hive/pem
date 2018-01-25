@@ -16,7 +16,7 @@ usage() {
     echo "  remove              Remove a Python's version."
     echo "  create-dir-env      Configure local Python's environment for current directory."
     echo "  folder-state        Show Python's environment for current folder."
-    echo "  folder-clean        Clean up Python's environment for current folder."
+    echo "  clean-dir-env       Clean up Python's environment for current directory."
 }
 
 commands() {
@@ -26,7 +26,7 @@ commands() {
     echo "remove"
     echo "create-dir-env"
     echo "folder-state"
-    echo "folder-clean"
+    echo "clean-dir-env"
 }
 
 main() {
