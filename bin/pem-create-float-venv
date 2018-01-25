@@ -9,5 +9,5 @@ pem-default() {
 }
 
 usage() {
-    echo "Usage: pem create-float-env <version> <name>"
+    echo "Usage: pem create-float-venv <version> <name>"
 }

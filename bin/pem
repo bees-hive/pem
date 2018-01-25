@@ -12,12 +12,18 @@ usage() {
     echo "Available commands are:"
     echo "  help                displays current message."
     echo "  install             installs a version of Python."
-    echo "  use-venv            configures default virtual environment."
-    echo "  remove              removes a Python's version."
-    echo "  create-dir-env      configures local Python's environment for current directory."
-    echo "  display-dir-env     shows Python's virtual environment for current directory."
-    echo "  clean-dir-env       cleans up Python's virtual environment for current directory."
-    echo "  create-float-env    creates float Python's virtual environment."
+    echo "  remove              removes provided either version of Python or"
+    echo "                      virtual environment."
+    echo "  create-dir-venv     creates a virtual environment based on given"
+    echo "                      version and configures it as the local one"
+    echo "                      for a current directory."
+    echo "  display-dir-venv    displays Python's path which was configured"
+    echo "                      for the directory."
+    echo "  clean-dir-venv      removes virtual environment which was"
+    echo "                      configured for this directory."
+    echo "  create-float-venv   creates float Python's virtual environment."
+    echo "  use-venv            configures provided virtual environment as"
+    echo "                      default for the system."
 }
 
 commands() {
@@ -25,10 +31,10 @@ commands() {
     echo "install"
     echo "use-venv"
     echo "remove"
-    echo "create-dir-env"
-    echo "display-dir-env"
-    echo "clean-dir-env"
-    echo "create-float-env"
+    echo "create-dir-venv"
+    echo "display-dir-venv"
+    echo "clean-dir-venv"
+    echo "create-float-venv"
 }
 
 main() {

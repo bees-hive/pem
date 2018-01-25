@@ -7,7 +7,7 @@ _pem() {
     prev="${COMP_WORDS[COMP_CWORD-1]}"
 
     case "${prev}" in 
-        remove | use-venv | create-dir-env | create-float-env)
+        remove | use-venv | create-dir-venv | create-float-venv)
             COMPREPLY=( $(compgen -W "$(pyenv versions --bare)" ${cur}) )
             return 0 ;; 
         install)

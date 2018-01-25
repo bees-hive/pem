@@ -7,5 +7,5 @@ pem-default() {
 }
 
 usage(){
-    echo "Usage: pem display-dir-env"
+    echo "Usage: pem display-dir-venv"
 }
