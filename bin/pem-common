@@ -2,8 +2,6 @@
 set -e
 [ "$PEM_DEBUG" = "yes" ] && set -x
 
-export PEM_VENV_LINK='venv'
-
 pem_check_version(){
     if [ -z "$1" ]; then
         echo "Please specify Python's version (like 2.7.11)."

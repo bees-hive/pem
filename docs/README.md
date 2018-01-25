@@ -16,11 +16,9 @@ remove
 ------
 Removes provided Python's environment. It's possible to pass several environments instead of one.
 
-folder-clean
-------------
+clean-dir-env
+-------------
 Removes Python's environment which was configured for this directory.
-
-@todo #58 Rename `folder-clean` to `clean-dir-env`.
 
 create-dir-env
 --------------
