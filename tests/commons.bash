@@ -49,3 +49,9 @@ fake-fail() {
 export -f fake
 export -f fake-pass
 export -f fake-fail
+
+teardown() {
+    if [ -d ${TMP_DIR} ]; then
+        rm -r ${TMP_DIR}
+    fi
+}
