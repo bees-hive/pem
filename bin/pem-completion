@@ -14,7 +14,7 @@ _pem() {
             local data=$(pyenv install --list | sed '/Available versions:/d')
             COMPREPLY=( $(compgen -W "${data}" ${cur}) )
             return 0 ;;
-        folder-env)
+        create-dir-env)
             COMPREPLY=( $(compgen -W "--with-vevn-link" ${cur}) )
             return 0 ;;
         *)
