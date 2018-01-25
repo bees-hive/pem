@@ -26,10 +26,10 @@ Removes virtual environment which was configured for this directory.
 
 create-float-venv
 -----------------
-Creates a float virtual environment. In order to use it, you have to run `use-venv`.
+Creates a float virtual environment. In order to use it, you have to run `use-float-venv`.
 
-use-venv
---------
+use-float-venv
+--------------
 Configures provided virtual environment as default for the system.
 
 display-venv
