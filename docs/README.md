@@ -24,9 +24,7 @@ Removes Python's environment which was configured for this directory.
 
 create-dir-env
 --------------
-Creates an environment for a current directory. Also, the command configures created environment as a local one for the directory.
-
-@todo #58 Update `create-dir-env` command implementation if it doesn't match with the documentation.
+Creates an environment based on given version and configures it as the local one for a current directory.
 
 folder-state
 -------------
