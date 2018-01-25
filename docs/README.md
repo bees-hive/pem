@@ -31,3 +31,7 @@ Creates a float virtual environment. In order to use it, you have to run `use-ve
 use-venv
 --------
 Configures provided virtual environment as default for the system.
+
+display-venv
+------------
+Displays system's virtual environment.

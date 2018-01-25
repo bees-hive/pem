@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -e
+[ "$PEM_DEBUG" = "yes" ] && set -x
+
+pem-default() {
+    echo "$(pyenv global)"
+}
+
+usage(){
+    echo "Usage: pem display-venv"
+}
