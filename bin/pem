@@ -24,7 +24,7 @@ usage() {
     echo "  create-float-venv   creates float Python's virtual environment."
     echo "  use-float-venv            configures provided virtual environment as"
     echo "                      default for the system."
-    echo "  display-venv        displays system's virtual environment."
+    echo "  display-float-venv        displays system's virtual environment."
 }
 
 commands() {
@@ -36,7 +36,7 @@ commands() {
     echo "clean-dir-venv"
     echo "create-float-venv"
     echo "use-float-venv"
-    echo "display-venv"
+    echo "display-float-venv"
 }
 
 main() {
