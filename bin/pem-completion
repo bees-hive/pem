@@ -7,15 +7,12 @@ _pem() {
     prev="${COMP_WORDS[COMP_CWORD-1]}"
 
     case "${prev}" in 
-        remove | default)
+        remove | default | create-dir-env)
             COMPREPLY=( $(compgen -W "$(pyenv versions --bare)" ${cur}) )
             return 0 ;; 
         install)
             local data=$(pyenv install --list | sed '/Available versions:/d')
             COMPREPLY=( $(compgen -W "${data}" ${cur}) )
-            return 0 ;;
-        create-dir-env)
-            COMPREPLY=( $(compgen -W "--with-vevn-link" ${cur}) )
             return 0 ;;
         *)
             if ! [[ "install remove" =~ "${prev}" ]]; then
