@@ -7,7 +7,7 @@ _pem() {
     prev="${COMP_WORDS[COMP_CWORD-1]}"
 
     case "${prev}" in 
-        python-remove | default)
+        remove | default)
             COMPREPLY=( $(compgen -W "$(pyenv versions --bare --skip-aliases)" ${cur}) )
             return 0 ;; 
         install)

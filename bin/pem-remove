@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -e
+[ "$PEM_DEBUG" = "yes" ] && set -x
+
+pem-default() {
+    pem_check_version "$1"
+    echo "pyenv removes '$1' version of Python."
+    pyenv uninstall -f "$1"
+}
+
+usage(){
+    echo "Usage: pem remove <version>"
+}
+
