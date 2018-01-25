@@ -21,15 +21,12 @@ folder-clean
 Removes Python's environment which was configured for this directory.
 
 @todo #58 Rename `folder-clean` to `clean-dir-env`.
- 
-folder-env
-----------
+
+create-dir-env
+--------------
 Creates an environment for a current directory. Also, the command configures created environment as a local one for the directory.
 
-@todo #58 Rename `folder-env` to `create-dir-env`.
-
 @todo #58 Update `create-dir-env` command implementation if it doesn't match with the documentation.
-
 
 folder-state
 -------------
