@@ -8,7 +8,7 @@ _pem() {
 
     case "${prev}" in 
         remove | default)
-            COMPREPLY=( $(compgen -W "$(pyenv versions --bare --skip-aliases)" ${cur}) )
+            COMPREPLY=( $(compgen -W "$(pyenv versions --bare)" ${cur}) )
             return 0 ;; 
         install)
             local data=$(pyenv install --list | sed '/Available versions:/d')
@@ -18,9 +18,13 @@ _pem() {
             COMPREPLY=( $(compgen -W "--with-vevn-link" ${cur}) )
             return 0 ;;
         *)
-            if [ "${prev}" != "install" ]; then
+            if ! [[ "install remove" =~ "${prev}" ]]; then
                 if [[ "${COMP_WORDS[@]}" =~ "install" ]]; then
                     COMPREPLY=( $(compgen -W "$(pyenv install --list | sed '/Available versions:/d')" ${cur}) )
+                    return 0
+                fi
+                if [[ "${COMP_WORDS[@]}" =~ "remove" ]]; then
+                    COMPREPLY=( $(compgen -W "$(pyenv versions --bare)" ${cur}) )
                     return 0
                 fi
             fi

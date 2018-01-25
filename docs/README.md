@@ -6,24 +6,22 @@ Displays a help message.
 
 install
 -------
-Installs desired version of Python. In addition, the command updates `pip` to the latest version and installs `virtualenv` package. It's possible to pass several versions instead of one. 
+Installs desired version of Python. In addition, the command updates `pip` to the latest version and installs `virtualenv` package. It's possible to pass several versions instead of one.
 
 default
 -------
 Configures provided Python's environment as default for the system.
 
 remove
--------------
-Removes provided Python's environment.
-
-@todo #58 Add ability to remove several versions at the same time.
+------
+Removes provided Python's environment. It's possible to pass several environments instead of one.
 
 folder-clean
 ------------
 Removes Python's environment which was configured for this directory.
 
 @todo #58 Rename `folder-clean` to `clean-dir-env`.
-
+ 
 folder-env
 ----------
 Creates an environment for a current directory. Also, the command configures created environment as a local one for the directory.

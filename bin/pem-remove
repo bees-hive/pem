@@ -4,11 +4,15 @@ set -e
 
 pem-default() {
     pem_check_version "$1"
-    echo "pyenv removes '$1' version of Python."
-    pyenv uninstall -f "$1"
+    for VERSION in "$@"; do
+        (
+            echo "pyenv removes '${VERSION}' version of Python."
+            pyenv uninstall -f "${VERSION}"
+        ) || message-in-box "Unable to remove ${VERSION}"
+    done
 }
 
 usage(){
-    echo "Usage: pem remove <version>"
+    echo "Usage: pem remove <version> [version...]"
 }
 
