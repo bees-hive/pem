@@ -8,5 +8,5 @@ pem-default() {
 }
 
 usage() {
-    echo "Usage: pem clean-dir-env"
+    echo "Usage: pem clean-dir-venv"
 }

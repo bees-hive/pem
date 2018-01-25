@@ -10,5 +10,5 @@ pem-default() {
 }
 
 usage() {
-    echo "Usage: pem create-dir-env <version>"
+    echo "Usage: pem create-dir-venv <version>"
 }
