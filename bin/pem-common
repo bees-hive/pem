@@ -4,11 +4,17 @@ set -e
 
 pem_check_version(){
     if [ -z "$1" ]; then
-        echo "Please specify Python's version (like 2.7.11)."
+        echo "Please specify a version of Python (like 3.6.0)!"
         exit 20
     fi
 }
 
+pem_check_venv_name(){
+    if [ -z "$1" ]; then
+        echo "Please specify a virtual environment name!"
+        exit 21
+    fi
+}
 message-in-box(){
     t="$@xxxx"
     c=${replace:--}

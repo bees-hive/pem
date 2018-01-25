@@ -12,13 +12,13 @@ load commons
 
 @test "create-float-env: float env raises error if version is not set" {
     run pem create-float-env
-    [[ "${lines[0]}" == "Please specify Python's version (like 2.7.11)." ]]
+    [[ "${lines[0]}" == "Please specify a version of Python (like 3.6.0)!" ]]
     [ "$status" -eq 20 ]
 }
 
 @test "create-float-env: float env raises error if name is not set" {
     run pem create-float-env 2.7.14
-    [[ "${lines[0]}" == "Please set a name for float virtual environment." ]]
+    [[ "${lines[0]}" == "Please specify a virtual environment name!" ]]
     [ "$status" -eq 21 ]
 }
 

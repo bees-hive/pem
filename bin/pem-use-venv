@@ -4,10 +4,10 @@ set -e
 
 pem-default() {
     pem_check_version "$1"
-    echo "Make '$1' Python's version as default."
+    echo "Make '$1' virtual environment as default."
     pyenv global "$1" && pyenv shell "$1"
 }
 
 usage() {
-    echo "Usage: pem default <version>"
+    echo "Usage: pem use-venv <name>"
 }

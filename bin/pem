@@ -12,7 +12,7 @@ usage() {
     echo "Available commands are:"
     echo "  help                displays current message."
     echo "  install             installs a version of Python."
-    echo "  default             configures default Python's version."
+    echo "  use-venv            configures default virtual environment."
     echo "  remove              removes a Python's version."
     echo "  create-dir-env      configures local Python's environment for current directory."
     echo "  display-dir-env     shows Python's virtual environment for current directory."
@@ -23,7 +23,7 @@ usage() {
 commands() {
     echo "help"
     echo "install"
-    echo "default"
+    echo "use-venv"
     echo "remove"
     echo "create-dir-env"
     echo "display-dir-env"
