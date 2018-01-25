@@ -15,7 +15,7 @@ usage() {
     echo "  default             Configure default Python's version."
     echo "  remove              Remove a Python's version."
     echo "  create-dir-env      Configure local Python's environment for current directory."
-    echo "  folder-state        Show Python's environment for current folder."
+    echo "  display-dir-env     Show Python's environment for current directory."
     echo "  clean-dir-env       Clean up Python's environment for current directory."
 }
 
@@ -25,7 +25,7 @@ commands() {
     echo "default"
     echo "remove"
     echo "create-dir-env"
-    echo "folder-state"
+    echo "display-dir-env"
     echo "clean-dir-env"
 }
 
