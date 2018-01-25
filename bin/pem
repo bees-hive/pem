@@ -10,13 +10,14 @@ usage() {
     echo "Usage: pem <command> help"
     echo ""
     echo "Available commands are:"
-    echo "  help                Display current message."
-    echo "  install             Install a version of Python."
-    echo "  default             Configure default Python's version."
-    echo "  remove              Remove a Python's version."
-    echo "  create-dir-env      Configure local Python's environment for current directory."
-    echo "  display-dir-env     Show Python's environment for current directory."
-    echo "  clean-dir-env       Clean up Python's environment for current directory."
+    echo "  help                displays current message."
+    echo "  install             installs a version of Python."
+    echo "  default             configures default Python's version."
+    echo "  remove              removes a Python's version."
+    echo "  create-dir-env      configures local Python's environment for current directory."
+    echo "  display-dir-env     shows Python's virtual environment for current directory."
+    echo "  clean-dir-env       cleans up Python's virtual environment for current directory."
+    echo "  create-float-env    creates float Python's virtual environment."
 }
 
 commands() {
@@ -27,6 +28,7 @@ commands() {
     echo "create-dir-env"
     echo "display-dir-env"
     echo "clean-dir-env"
+    echo "create-float-env"
 }
 
 main() {
