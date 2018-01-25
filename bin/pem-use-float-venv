@@ -9,5 +9,5 @@ pem-default() {
 }
 
 usage() {
-    echo "Usage: pem use-venv <name>"
+    echo "Usage: pem use-float-venv <name>"
 }

@@ -22,7 +22,7 @@ usage() {
     echo "  clean-dir-venv      removes virtual environment which was"
     echo "                      configured for this directory."
     echo "  create-float-venv   creates float Python's virtual environment."
-    echo "  use-venv            configures provided virtual environment as"
+    echo "  use-float-venv            configures provided virtual environment as"
     echo "                      default for the system."
     echo "  display-venv        displays system's virtual environment."
 }
@@ -30,12 +30,12 @@ usage() {
 commands() {
     echo "help"
     echo "install"
-    echo "use-venv"
     echo "remove"
     echo "create-dir-venv"
     echo "display-dir-venv"
     echo "clean-dir-venv"
     echo "create-float-venv"
+    echo "use-float-venv"
     echo "display-venv"
 }
 
