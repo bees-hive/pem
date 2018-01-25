@@ -12,11 +12,9 @@ default
 -------
 Configures provided Python's environment as default for the system.
 
-python-remove
+remove
 -------------
 Removes provided Python's environment.
-
-@todo #58 Rename `python-remove` to `remove`.
 
 @todo #58 Add ability to remove several versions at the same time.
 

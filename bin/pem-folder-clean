@@ -5,7 +5,7 @@ set -e
 pem-default() {
     ls ${PEM_VENV_LINK} 1>/dev/null || exit -5
     rm -rf ${PEM_VENV_LINK} && echo "'${PEM_VENV_LINK}' link is removed."
-    pem python-remove $(cat .python-version)
+    pem remove $(cat .python-version)
     pyenv local --unset && echo "Local version of Python is unset for this folder."
 }
 
