@@ -8,10 +8,6 @@ install
 -------
 Installs desired version of Python. In addition, the command updates `pip` to the latest version and installs `virtualenv` package. It's possible to pass several versions instead of one.
 
-default
--------
-Configures provided Python's version as default for the system.
-
 remove
 ------
 Removes provided Python's version. It's possible to pass several versions instead of one.
@@ -32,8 +28,6 @@ create-float-env
 ----------------
 Creates a float virtual environment. In order to use it, you have to `activate` it.
 
-activate
+use-venv
 --------
-Activates a virtual environment.
-
-@todo #58 Implement `activate` command
+Configures provided Python's version as default for the system.

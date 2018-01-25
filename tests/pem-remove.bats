@@ -10,7 +10,7 @@ load commons
 
 @test "remove: removal raises error if version is not set" {
     run pem remove
-    [[ "${lines[0]}" == "Please specify Python's version (like 2.7.11)." ]]
+    [[ "${lines[0]}" == "Please specify a version of Python (like 3.6.0)!" ]]
     [ "$status" -ne 0 ]
 }
 
