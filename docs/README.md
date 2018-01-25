@@ -10,32 +10,30 @@ Installs desired version of Python. In addition, the command updates `pip` to th
 
 default
 -------
-Configures provided Python's environment as default for the system.
+Configures provided Python's version as default for the system.
 
 remove
 ------
-Removes provided Python's environment. It's possible to pass several environments instead of one.
+Removes provided Python's version. It's possible to pass several versions instead of one.
 
 clean-dir-env
 -------------
-Removes Python's environment which was configured for this directory.
+Removes Python's virtual environment which was configured for this directory.
 
 create-dir-env
 --------------
-Creates an environment based on given version and configures it as the local one for a current directory.
+Creates a virtual environment based on given version and configures it as the local one for a current directory.
 
 display-dir-env
 ---------------
-Displays Python's path which was configured for the directory. If the environment is absent, a default Python's path will be displayed.
+Displays Python's path which was configured for the directory. If the virtual environment is absent, a default Python's path will be displayed.
 
 create-float-env
 ----------------
-Creates a float environment. In order to use it, you have to `activate` it.
-
-@todo #58 Implement `create-float-env` command
+Creates a float virtual environment. In order to use it, you have to `activate` it.
 
 activate
 --------
-Activates an environment.
+Activates a virtual environment.
 
 @todo #58 Implement `activate` command

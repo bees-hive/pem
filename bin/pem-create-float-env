@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -e
+[ "$PEM_DEBUG" = "yes" ] && set -x
+
+pem-default() {
+    pem_check_version "$1"
+    if [ -z "$2" ]; then
+        echo "Please set a name for float virtual environment."
+        exit 21
+    fi
+    pyenv virtualenv "$1" "$2"
+}
+
+usage() {
+    echo "Usage: pem create-float-env <version> <name>"
+}
