@@ -3,9 +3,9 @@
 `pem` tool allows easy manage different Python's versions and dependencies. To find out more, please visit [http://pem.extsoft.pro
 ](http://pem.extsoft.pro).
 
-[![Rultor.com](http://www.rultor.com/b/extsoft/pem)](http://www.rultor.com/p/extsoft/pem)
-[![PDD status](http://www.0pdd.com/svg?name=extsoft/pem)](http://www.0pdd.com/p?name=extsoft/pem)
-[![Build Status](https://travis-ci.org/extsoft/pem.svg?branch=master)](https://travis-ci.org/extsoft/pem)
+[![Rultor.com](http://www.rultor.com/b/bees-hive/pem)](http://www.rultor.com/p/bees-hive/pem)
+[![PDD status](http://www.0pdd.com/svg?name=bees-hive/pem)](http://www.0pdd.com/p?name=bees-hive/pem)
+[![Build Status](https://travis-ci.org/bees-hive/pem.svg?branch=master)](https://travis-ci.org/bees-hive/pem)
 
 Installation
 ============
@@ -22,9 +22,9 @@ Then, install `pem`:
 
 Homebrew
 --------
-`brew install extsoft/insight/pem`
+`brew install bees-hive/hive/pem`
 
-To find out more [click here](https://github.com/extsoft/homebrew-insight).
+To find out more [click here](https://github.com/bees-hive/homebrew-hive).
 
 Contribution
 ============
